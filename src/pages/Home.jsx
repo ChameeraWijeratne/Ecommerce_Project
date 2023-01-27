@@ -7,7 +7,7 @@ import Helmet from "../components/Helmet/Helmet";
 import "../styles/home.css"
 
 import {Col, Container, Row} from "reactstrap";
-import heroImg from "../assets/images/hero-img.jpg"
+import heroImg from "../assets/images/hero-bg-1.png"
 import Services from "../services/Services";
 
 const Home = () => {
@@ -35,6 +35,15 @@ const Home = () => {
             </Container>
         </section>
             <Services/>
+            <section className="trending_products">
+                <Container>
+                    <Row>
+                        <Col lg='12' className="text-center">
+                            <h2 className="section_title">Trending Products</h2>
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
     </Helmet>
     );
 };
