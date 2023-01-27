@@ -1,16 +1,16 @@
-import productImg01 from "../images/double-sofa-01.png";
-import productImg02 from "../images/double-sofa-02.png";
-import productImg03 from "../images/double-sofa-03.png";
+import productImg01 from "../images/Sunglass-01.png";
+import productImg02 from "../images/Sunglass-02.jpg";
+import productImg03 from "../images/Sunglass-03.jpg";
 
-import productImg04 from "../images/single-sofa-01.jpg";
-import productImg05 from "../images/single-sofa-02.jpg";
-import productImg06 from "../images/single-sofa-03.jpg";
-import productImg007 from "../images/single-sofa-04.png";
+import productImg04 from "../images/Shoes-01.jpg";
+import productImg05 from "../images/Shoes-02.jpg";
+import productImg06 from "../images/Shoes-03.jpg";
+import productImg007 from "../images/Shoes-04.jpg";
 
-import productImg07 from "../images/arm-chair-01.jpg";
-import productImg08 from "../images/arm-chair-02.jpg";
-import productImg09 from "../images/arm-chair-03.jpg";
-import productImg10 from "../images/arm-chair-01.jpg";
+import productImg07 from "../images/handbag-01.jpg";
+import productImg08 from "../images/handbag-02.jpg";
+import productImg09 from "../images/handbag-03.jpg";
+import productImg10 from "../images/handbag-01.jpg";
 
 import productImg13 from "../images/phone-01.jpg";
 import productImg14 from "../images/phone-02.jpg";
@@ -187,7 +187,7 @@ const products = [
     id: "07",
     productName: "Sakarias Armchair",
     imgUrl: productImg07,
-    category: "chair",
+    category: "handbag",
     price: 99,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -233,7 +233,7 @@ const products = [
     id: "08",
     productName: "Baltsar Chair",
     imgUrl: productImg08,
-    category: "chair",
+    category: "handbag",
     price: 89,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -256,7 +256,7 @@ const products = [
     id: "09",
     productName: "Helmar Chair",
     imgUrl: productImg09,
-    category: "chair",
+    category: "handbag",
     price: 112,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -301,7 +301,7 @@ const products = [
     id: "25",
     productName: "Sakarias Armchair",
     imgUrl: productImg10,
-    category: "chair",
+    category: "handbag",
     price: 99,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
