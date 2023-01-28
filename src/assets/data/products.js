@@ -1,16 +1,17 @@
 import productImg01 from "../images/Sunglass-01.png";
-import productImg02 from "../images/Sunglass-02.jpg";
-import productImg03 from "../images/Sunglass-03.jpg";
+import productImg02 from "../images/Sunglass-02.png";
+import productImg03 from "../images/Sunglass-04.png";
+import productImg03_1 from "../images/Sunglass-03.png";
 
-import productImg04 from "../images/Shoes-01.jpg";
-import productImg05 from "../images/Shoes-02.jpg";
-import productImg06 from "../images/Shoes-03.jpg";
-import productImg007 from "../images/Shoes-04.jpg";
+import productImg04 from "../images/Shoes-01.png";
+import productImg05 from "../images/Shoes-02.png";
+import productImg06 from "../images/Shoes-03.png";
+import productImg007 from "../images/Shoes-04.png";
 
-import productImg07 from "../images/handbag-01.jpg";
-import productImg08 from "../images/handbag-02.jpg";
-import productImg09 from "../images/handbag-03.jpg";
-import productImg10 from "../images/handbag-01.jpg";
+import productImg07 from "../images/handbag-01.png";
+import productImg08 from "../images/handbag-02.png";
+import productImg09 from "../images/handbag-03.png";
+import productImg10 from "../images/handbag-04.png";
 
 import productImg13 from "../images/phone-01.jpg";
 import productImg14 from "../images/phone-02.jpg";
@@ -31,10 +32,10 @@ import productImg25 from "../images/wireless-03.png";
 const products = [
   {
     id: "01",
-    productName: "Stone and Beam Westview ",
+    productName: "Eye Protect Sunglass",
     imgUrl: productImg01,
     category: "sunglass",
-    price: 193,
+    price: 62,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -50,10 +51,10 @@ const products = [
 
   {
     id: "02",
-    productName: "Rivet Bigelow Modern ",
+    productName: "Rayban Sunglass",
     imgUrl: productImg02,
     category: "sunglass",
-    price: 253,
+    price: 53,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -73,10 +74,10 @@ const products = [
 
   {
     id: "03",
-    productName: "Amazon Brand Modern Sofa",
+    productName: "Sports Sunglass",
     imgUrl: productImg03,
     category: "sunglass",
-    price: 173,
+    price: 53,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -95,10 +96,10 @@ const products = [
   },
   {
     id: "26",
-    productName: "Rivet Bigelow Modern ",
-    imgUrl: productImg02,
+    productName: "Luxury Sunglass",
+    imgUrl: productImg03_1,
     category: "sunglass",
-    price: 253,
+    price: 67,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -119,7 +120,7 @@ const products = [
     id: "04",
     productName: "Fllufy Sheep Sofa",
     imgUrl: productImg04,
-    category: "sunglass",
+    category: "sunglass_1",
     price: 163,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -140,10 +141,10 @@ const products = [
 
   {
     id: "05",
-    productName: "Faux Velvet Sofa",
+    productName: "Ladies High Heels",
     imgUrl: productImg05,
     category: "shoes",
-    price: 163,
+    price: 73,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -163,10 +164,10 @@ const products = [
 
   {
     id: "06",
-    productName: "Fllufy Sheep Sofa",
+    productName: "Party Heels",
     imgUrl: productImg06,
     category: "shoes",
-    price: 163,
+    price: 53,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -185,10 +186,10 @@ const products = [
   },
   {
     id: "28",
-    productName: "Fllufy Sheep Sofa",
+    productName: "Latest Heels",
     imgUrl: productImg04,
     category: "shoes",
-    price: 163,
+    price: 83,
     shortDesc:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -207,10 +208,10 @@ const products = [
   },
   {
     id: "07",
-    productName: "Sakarias Armchair",
+    productName: "Classic Ladies Bag",
     imgUrl: productImg07,
     category: "handbag",
-    price: 99,
+    price: 65,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -230,7 +231,7 @@ const products = [
 
   {
     id: "27",
-    productName: "Modern Arm Sofa",
+    productName: "Leather Heels",
     imgUrl: productImg007,
     category: "shoes",
     price: 173,
@@ -253,7 +254,7 @@ const products = [
 
   {
     id: "08",
-    productName: "Baltsar Chair",
+    productName: "David Jones Paris Bag",
     imgUrl: productImg08,
     category: "handbag",
     price: 89,
@@ -276,7 +277,7 @@ const products = [
 
   {
     id: "09",
-    productName: "Helmar Chair",
+    productName: "LouisWill Ladies Bag",
     imgUrl: productImg09,
     category: "handbag",
     price: 112,
@@ -321,7 +322,7 @@ const products = [
   },
   {
     id: "25",
-    productName: "Sakarias Armchair",
+    productName: "Ladies Mini Shoulder Bag",
     imgUrl: productImg10,
     category: "handbag",
     price: 99,

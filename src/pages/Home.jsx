@@ -19,6 +19,9 @@ import counterImg from "../assets/images/counter-timer-img-1.png"
 const Home = () => {
     const [trendingProducts,setTrendingProducts] = useState([])
     const [bestSalesProducts,setBestSalesProducts] = useState([])
+    const [bestSalesProducts_1,setBestSalesProducts_1] = useState([])
+    const [mobileProducts,setMobileProducts] = useState([])
+    const [wirelessProducts,setWirelessProducts] = useState([])
 
     const year = new Date().getFullYear();
 
@@ -27,8 +30,17 @@ const Home = () => {
 
         const filteredBestSalesProducts = products.filter(item=>item.category === "shoes");
 
+        const filteredBestSalesProducts_1 = products.filter(item=>item.category === "sunglass");
+
+        const filteredMobileProducts = products.filter(item=>item.category === "mobile");
+
+        const filteredWirelessProducts = products.filter(item=>item.category === "wireless");
+
         setTrendingProducts(filteredTrendingProducts);
         setBestSalesProducts(filteredBestSalesProducts);
+        setBestSalesProducts_1(filteredBestSalesProducts_1);
+        setMobileProducts(filteredMobileProducts);
+        setWirelessProducts(filteredWirelessProducts);
         },[]);
 
     return (
@@ -72,6 +84,7 @@ const Home = () => {
                             <h2 className="section_title">Best Sales</h2>
                         </Col>
                         <ProductList data={bestSalesProducts}/>
+                        <ProductList data={bestSalesProducts_1}/>
                     </Row>
                 </Container>
             </section>
@@ -90,11 +103,21 @@ const Home = () => {
                         <Col lg='6' md='6' className="text-end">
                             <img src={counterImg} alt=""/>
                         </Col>
-
                     </Row>
                 </Container>
             </section>
 
+            <section className="new_arrivals">
+                <Container>
+                    <Row>
+                        <Col lg='12' className="text-center">
+                            <h2 className="section_title">New Arrivals</h2>
+                        </Col>
+                        <ProductList data={mobileProducts}/>
+                        <ProductList data={wirelessProducts}/>
+                    </Row>
+                </Container>
+            </section>
     </Helmet>
     );
 };
