@@ -33,7 +33,7 @@ const products = [
     id: "01",
     productName: "Stone and Beam Westview ",
     imgUrl: productImg01,
-    category: "sofa",
+    category: "sunglass",
     price: 193,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -52,7 +52,7 @@ const products = [
     id: "02",
     productName: "Rivet Bigelow Modern ",
     imgUrl: productImg02,
-    category: "sofa",
+    category: "sunglass",
     price: 253,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -75,7 +75,7 @@ const products = [
     id: "03",
     productName: "Amazon Brand Modern Sofa",
     imgUrl: productImg03,
-    category: "sofa",
+    category: "sunglass",
     price: 173,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -97,7 +97,7 @@ const products = [
     id: "26",
     productName: "Rivet Bigelow Modern ",
     imgUrl: productImg02,
-    category: "sofa",
+    category: "sunglass",
     price: 253,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -119,7 +119,7 @@ const products = [
     id: "04",
     productName: "Fllufy Sheep Sofa",
     imgUrl: productImg04,
-    category: "sofa",
+    category: "sunglass",
     price: 163,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -142,7 +142,7 @@ const products = [
     id: "05",
     productName: "Faux Velvet Sofa",
     imgUrl: productImg05,
-    category: "sofa",
+    category: "shoes",
     price: 163,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -165,7 +165,7 @@ const products = [
     id: "06",
     productName: "Fllufy Sheep Sofa",
     imgUrl: productImg06,
-    category: "sofa",
+    category: "shoes",
     price: 163,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -210,7 +210,7 @@ const products = [
     id: "27",
     productName: "Modern Arm Sofa",
     imgUrl: productImg007,
-    category: "sofa",
+    category: "shoes",
     price: 173,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
