@@ -12,6 +12,10 @@ import heroImg from "../assets/images/hero-bg-1.png"
 import Services from "../services/Services";
 import ProductList from "../components/UI/ProductList";
 
+import Clock from "../components/UI/Clock";
+
+import counterImg from "../assets/images/counter-timer-img-1.png"
+
 const Home = () => {
     const [trendingProducts,setTrendingProducts] = useState([])
     const [bestSalesProducts,setBestSalesProducts] = useState([])
@@ -71,6 +75,26 @@ const Home = () => {
                     </Row>
                 </Container>
             </section>
+
+            <section className="timer_count">
+                <Container>
+                    <Row>
+                        <Col lg='6' md='6' >
+                            <div className="clock_top_content">
+                                <h4 className="text-white fs-6 mb-2">Limited Offer</h4>
+                                <h3 className="text-white fs-5 mb-3">Quality Handbags</h3>
+                            </div>
+                            <Clock/>
+                            <motion.button whileTap={{scale: 1.2}} className="buy_btn store_btn"><Link to='/shop'>Visit Store</Link></motion.button>
+                        </Col>
+                        <Col lg='6' md='6' className="text-end">
+                            <img src={counterImg} alt=""/>
+                        </Col>
+
+                    </Row>
+                </Container>
+            </section>
+
     </Helmet>
     );
 };
