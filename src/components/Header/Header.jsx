@@ -27,7 +27,9 @@ const nav_links=[
 
 const Header = () => {
 
-    const headerRef = useRef(null)
+    const headerRef = useRef(null);
+
+    const menuRef = useRef(null);
 
     const stickyHeaderFunc = ()=>{
         window.addEventListener('scroll', ()=>{
@@ -44,6 +46,8 @@ const Header = () => {
         return ()=> window.removeEventListener('scroll',stickyHeaderFunc)
     });
 
+    const menuToggle = ()=> menuRef.current.classList.toggle('active_menu')
+
     return <header className="header" ref={headerRef}>
         <Container>
             <Row>
@@ -54,7 +58,7 @@ const Header = () => {
                             <h1>Bloomingdale's</h1>
                         </div>
                     </div>
-                    <div className="navigation">
+                    <div className="navigation" ref={menuRef} onClick={menuToggle}>
                         <ul className="menu">
                             {
                                 nav_links.map((item,index) =>(
@@ -79,12 +83,11 @@ const Header = () => {
                         <span>
                             <motion.img whileTap={{scale:1.2}} src={user_icon} alt=""/>
                         </span>
-                    </div>
-
-                    <div className="mobile_menu">
-                        <span>
+                        <div className="mobile_menu">
+                        <span onClick={menuToggle}>
                             <i className="ri-menu-line"></i>
                         </span>
+                        </div>
                     </div>
                 </div>
             </Row>
