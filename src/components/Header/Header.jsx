@@ -13,6 +13,9 @@ import {useSelector} from "react-redux";
 
 import useAuth from "../../custom-hooks/useAuth";
 import {Link} from "react-router-dom";
+import {signOut} from "firebase/auth";
+import {auth} from "../../firebase.config";
+import {toast} from "react-toastify";
 
 const nav_links=[
     {
@@ -48,9 +51,18 @@ const Header = () => {
                 headerRef.current.classList.remove('sticky_header')
             }
         })
+    };
+    const logout = ()=>{
+        signOut(auth).then(()=>{
+            toast.success('Logged Out')
+            navigate("/home");
+        }).catch(err=>{
+            toast.error(err.message)
+        });
     }
+
     useEffect(()=>{
-        stickyHeaderFunc()
+        stickyHeaderFunc();
 
         return ()=> window.removeEventListener('scroll',stickyHeaderFunc)
     });
@@ -95,24 +107,27 @@ const Header = () => {
                             <i className="ri-shopping-bag-3-fill"></i>
                             <span className="badge">{totalQuantity}</span>
                         </span>
+
                         <div className="profile">
                             <motion.img
                                 whileTap={{scale:1.2}}
-                                src={currentUser? currentUser.photoURL : userIcon}
+                                src={currentUser ? currentUser.photoURL : userIcon}
                                 alt=""
                                 onClick={toggleProfileActions}
                             />
+
                             <div className="profile_actions" ref={profileActionRef}
                             onClick={toggleProfileActions}>
                                 {
-                                    currentUser ? <span>Logout</span> : <div>
+                                    currentUser ? (<span onClick={logout}>Logout</span>) : (
+                                        <div className="d-flex align-items-center justify-content-center flex-column">
                                         <Link to="/signup">Signup</Link>
                                         <Link to="/login">Login</Link>
                                     </div>
-                                }
+                                    )}
                             </div>
-
                         </div>
+
                         <div className="mobile_menu">
                         <span onClick={menuToggle}>
                             <i className="ri-menu-line"></i>

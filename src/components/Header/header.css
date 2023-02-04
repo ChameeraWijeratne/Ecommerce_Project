@@ -76,35 +76,45 @@
     z-index: 10;
 }
 
-.nav_icons .profile img{
+.nav_icons{
     width: 30px;
     height: 30px;
     cursor: pointer;
     border-radius: 50%;
 }
 
+.profile img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    position: static;
+    transform: inherit;
+}
+
 .nav_icons .profile{
-    position: relative;
-    z-index: 9;
+    position: relative !important;
+    z-index: 100;
 }
 
 .nav_icons .profile .profile_actions{
     position: absolute;
     top: 98%;
-    left: 0;
-    width: 150px;
-    z-index: 10;
+    left: -50px;
+    width: 100px;
+    z-index: 100 !important;
     padding: 15px;
     align-items: center;
     flex-direction: column;
-    background: var(--card-bg-01);
-    line-height: 30px;
+    background: mediumvioletred;
+    color: white;
+    line-height: 25px;
     display: none;
     cursor: pointer;
 }
 
 .show_profileActions{
-    display: block;
+    display: block !important;
 }
 .mobile_menu{
     font-size: 1.3rem;
@@ -123,7 +133,7 @@
     position: sticky;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 1000;
     box-shadow: 3px 3px 8px -3px #ddd;
     background: white;
 }

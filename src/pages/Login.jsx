@@ -32,7 +32,8 @@ const Login = () => {
             console.log(user);
             setLoading(false);
             toast.success("Successfully logged in");
-            navigate('/checkout')
+            navigate('/checkout');
+
         }catch(error){
             setLoading(false);
             toast.error(error.message)
