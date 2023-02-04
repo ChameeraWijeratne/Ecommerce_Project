@@ -6,10 +6,13 @@ import './header.css'
 import {motion} from "framer-motion";
 
 import logo from '../../assets/images/eco-logo.png'
-import user_icon from '../../assets/images/user-icon.png'
+import userIcon from '../../assets/images/user-icon.png'
 
 import { Container, Row} from "reactstrap";
 import {useSelector} from "react-redux";
+
+import useAuth from "../../custom-hooks/useAuth";
+import {Link} from "react-router-dom";
 
 const nav_links=[
     {
@@ -30,11 +33,12 @@ const nav_links=[
 const Header = () => {
 
     const headerRef = useRef(null);
-
     const totalQuantity = useSelector(state=> state.cart.totalQuantity)
+    const profileActionRef = useRef(null)
 
     const menuRef = useRef(null);
     const navigate = useNavigate();
+    const {currentUser} = useAuth();
 
     const stickyHeaderFunc = ()=>{
         window.addEventListener('scroll', ()=>{
@@ -56,6 +60,8 @@ const Header = () => {
     const navigateToCart =()=>{
         navigate("/cart");
     }
+
+    const toggleProfileActions = ()=> profileActionRef.current.classList.toggle("show_profileActions")
 
     return <header className="header" ref={headerRef}>
         <Container>
@@ -89,9 +95,24 @@ const Header = () => {
                             <i className="ri-shopping-bag-3-fill"></i>
                             <span className="badge">{totalQuantity}</span>
                         </span>
-                        <span>
-                            <motion.img whileTap={{scale:1.2}} src={user_icon} alt=""/>
-                        </span>
+                        <div className="profile">
+                            <motion.img
+                                whileTap={{scale:1.2}}
+                                src={currentUser? currentUser.photoURL : userIcon}
+                                alt=""
+                                onClick={toggleProfileActions}
+                            />
+                            <div className="profile_actions" ref={profileActionRef}
+                            onClick={toggleProfileActions}>
+                                {
+                                    currentUser ? <span>Logout</span> : <div>
+                                        <Link to="/signup">Signup</Link>
+                                        <Link to="/login">Login</Link>
+                                    </div>
+                                }
+                            </div>
+
+                        </div>
                         <div className="mobile_menu">
                         <span onClick={menuToggle}>
                             <i className="ri-menu-line"></i>
