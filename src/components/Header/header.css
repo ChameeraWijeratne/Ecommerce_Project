@@ -112,6 +112,9 @@
     display: none;
     cursor: pointer;
 }
+.profile_actions a:hover{
+    color: #222222;
+}
 
 .show_profileActions{
     display: block !important;
