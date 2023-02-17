@@ -96,7 +96,7 @@ const Signup = () => {
 
                                     <FormGroup className="form_group">
                                         <input type="file"
-                                               onChange={e=> setFile(e.target.value[0])}
+                                               onChange={e=> setFile(e.target.files[0])}
                                                accept= "image/jpeg"
                                         />
                                     </FormGroup>
