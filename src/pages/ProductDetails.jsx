@@ -1,5 +1,4 @@
-import {useState, useRef, useEffect} from "react";
-
+import React,{useState, useRef, useEffect} from "react";
 import {Container,Row,Col} from "reactstrap";
 import {useParams} from "react-router-dom";
 import Helmet from "../components/Helmet/Helmet";
@@ -18,9 +17,9 @@ import useGetData from "../custom-hooks/useGetData";
 const ProductDetails = () => {
 
     const [product, setProduct] = useState({})
-    const [tab,setTab] = useState('desc');
-    const reviewUser = useRef('');
-    const reviewMsg = useRef('');
+    const [tab,setTab] = useState("desc");
+    const reviewUser = useRef("");
+    const reviewMsg = useRef("");
     const dispatch = useDispatch();
 
     const [rating,setRating] = useState(null);
@@ -28,20 +27,22 @@ const ProductDetails = () => {
 
     const {data : products} = useGetData("products")
 
-    const docRef = doc(db,"products",id);
+    const docRef = doc(db,'products',id);
 
-    useEffect(()=>{
-      const  getProduct = async()=>{
-          const docSnap = await getDoc(docRef)
+    useEffect(()=> {
+        const getProduct = async () => {
+            const docSnap = await getDoc(docRef);
 
-          if(docSnap.exists()){
-              setProduct(docSnap.data())
-          }else {
-              console.log("no product!")
-          }
-      }
-      getProduct();
-    },[])
+            if (docSnap.exists()) {
+                setProduct(docSnap.data())
+            } else {
+                console.log("no product!")
+            }
+        }
+
+        getProduct()
+
+    },[docRef]);
 
     const {
         imgUrl,
@@ -84,7 +85,8 @@ const ProductDetails = () => {
 
     useEffect(()=>{
         window.scrollTo(0,0)
-    },[product]);
+    },[]);
+
     return (
     <Helmet title={productName}>
         <CommonSection title={productName}/>
@@ -121,7 +123,7 @@ const ProductDetails = () => {
 
                             <div className="d-flex align-items-center gap-5">
                                 <span className="product_price">${price}</span>
-                                <span>Category: {category.toUpperCase()}</span>
+                                <span>Category: {category}</span>
                             </div>
                             <p className="mt-3">{shortDesc}</p>
 
