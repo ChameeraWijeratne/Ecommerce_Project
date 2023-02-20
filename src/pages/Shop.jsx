@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, {useState,useEffect} from "react";
 
 import '../styles/shop.css'
 
@@ -6,15 +6,20 @@ import CommonSection from "../components/UI/CommonSection";
 import Helmet from "../components/Helmet/Helmet";
 import {Container,Row,Col} from "reactstrap";
 
-
-import products from "../assets/data/products";
 import ProductsList from "../components/UI/ProductList";
 
+import useGetData from "../custom-hooks/useGetData";
 
 
 const Shop = () => {
 
-    const [productsData, setProductsData] = useState(products)
+    const {data : products} = useGetData('products')
+
+    const [productsData, setProductsData] = useState([])
+
+    useEffect(()=>{
+        setProductsData(products)
+    },[products])
 
     const handleFilter = e=>{
         const filterValue = e.target.value
@@ -47,7 +52,6 @@ const Shop = () => {
                 const filteredProducts = products.filter(item => item.category === 'sunglass')
                 setProductsData(filteredProducts);
             }
-
 
     };
 

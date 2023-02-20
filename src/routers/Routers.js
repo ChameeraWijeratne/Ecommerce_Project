@@ -13,6 +13,8 @@ import AddProducts from "../admin/AddProducts";
 import AllProducts from "../admin/AllProducts";
 import Dashboard from "../admin/Dashboard";
 import Users from "../admin/Users";
+import AdminLogin from "../pages/AdminLogin";
+import ProtectedRouteAdmin from "./ProtectedRouteAdmin";
 
 const Routers = () =>{
 return <Routes>
@@ -24,6 +26,9 @@ return <Routes>
 
         <Route path="/*" element={<ProtectedRoute/>}>
             <Route path="checkout" element={<Checkout/>}/>
+        </Route>
+
+        <Route path="/*" element={<ProtectedRouteAdmin/>}>
             <Route path="dashboard" element={<Dashboard/>}/>
             <Route path="dashboard/all-products" element={<AllProducts/>}/>
             <Route path="dashboard/add-product" element={<AddProducts/>}/>
@@ -32,6 +37,7 @@ return <Routes>
 
         <Route path='login' element={<Login/>}/>
         <Route path='signup' element={<Signup/>}/>
+        <Route path='admin-login' element={<AdminLogin/>}/>
 </Routes>;
 };
 

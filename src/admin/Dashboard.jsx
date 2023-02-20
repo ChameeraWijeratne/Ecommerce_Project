@@ -3,6 +3,8 @@ import {Container, Row, Col} from "reactstrap";
 import "../styles/dashboard.css";
 
 import useGetData from "../custom-hooks/useGetData";
+import {Link} from "react-router-dom";
+import {motion} from "framer-motion";
 
 const Dashboard = () =>{
 
@@ -38,6 +40,8 @@ const Dashboard = () =>{
                                 <span>{users.length}</span>
                             </div>
                         </Col>
+                        <motion.button whileTap={{scale:1.2}} className="buy_btn"><Link to='/dashboard/add-product'>ADD NEW PRODUCT</Link></motion.button>
+                        <motion.button whileTap={{scale:1.2}} className="buy_btn"><Link to='/home'>HOME</Link></motion.button>
                     </Row>
                 </Container>
             </section>

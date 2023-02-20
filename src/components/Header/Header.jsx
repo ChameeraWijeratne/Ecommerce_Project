@@ -119,7 +119,11 @@ const Header = () => {
                             <div className="profile_actions" ref={profileActionRef}
                             onClick={toggleProfileActions}>
                                 {
-                                    currentUser ? (<span onClick={logout}>Logout</span>) : (
+                                    currentUser ? ((currentUser.email === "admin@gmail.com" ?
+                                            <div className="d-flex align-items-center justify-content-center flex-column">
+                                                <span onClick={logout}>Logout</span>
+                                                <Link to="/dashboard">Dashboard</Link>
+                                            </div> : <span onClick={logout}>Logout</span>)) : (
                                         <div className="d-flex align-items-center justify-content-center flex-column">
                                         <Link to="/signup">Signup</Link>
                                         <Link to="/login">Login</Link>
